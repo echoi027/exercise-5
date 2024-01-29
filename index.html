@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise5</title>
+    <h1>Color theory website</h1>
+    <style>
+    
+    h1{
+        color:green;
+        padding:10px;
+        background-color: antiquewhite;
+        font-family: ;
+    }
+    .message{color:black;
+        padding:10px;
+        font-weight: bold;
+        font-family:'Courier New', Courier, monospace;
+    text-align: center;}
+        
+
+    
+    img{
+        display:block; 
+        margin-left:auto;
+        margin-right:auto;}
+    button{
+        padding-left: 10px;
+        padding: 30px;
+        border-radius: 100%;
+        background-color: black;
+        color:white;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    </style>
+</head>
+<body>
+    <button id="changeColorButton">Change background color</button>
+    </div>
+<br>
+<p2 class="message">Click the button to see various colors</p2>
+        <button id="changeTextButton">Change text color</button>
+    
+    <img src="colorwheel.png" alt="colorwheel" width="700" height=auto> 
+   
+    <script>
+    let count = 0;
+    let count2 =0;
+    let colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+
+    document.getElementById('changeColorButton').addEventListener('click', function() {
+    // Change the background color
+    document.body.style.backgroundColor = colors[count];
+
+    if (count < colors.length - 1) {
+        console.log(`Current color: ${colors[count]}`);
+        count++;
+    } else {
+        // Reset the index to 0 to cycle through the colors again
+        count = 0;
+        console.log(`Current color: ${colors[count]}`);
+    }
+    
+});
+
+document.getElementById('changeTextButton').addEventListener('click', function() {
+    // Change the background color
+    document.querySelector('.message').style.color = colors[count2];
+
+    if (count2 < colors.length - 1) {
+        console.log(`Current color: ${colors[count]}`);
+        count2++;
+    } else {
+        // Reset the index to 0 to cycle through the colors again
+        count2 = 0;
+        console.log(`Current color: ${colors[count]}`);
+    }
+    
+});
+       
+       
+
+    </script>
+    
+</body>
+</html>
